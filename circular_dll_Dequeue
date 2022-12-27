@@ -1,0 +1,261 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node 
+{
+ struct node *prev;
+ int data;
+ struct node *next;
+};
+
+int main()
+{
+  int x=1,value,y;
+  struct node *front,*rear,*r,*temp;
+  front = rear = NULL;
+  printf("insertion in the doubly circular linked list or dequeue at end\n");
+  
+  while(x==1)
+  {
+    printf("enter the value to be enqueued\n");
+    scanf("%d",&value);
+    printf("want to enqueu at front end? press 2\n");
+    printf("want to enqueu at rear end? press 3\n");
+    scanf("%d",&y);
+    
+    while(y==3)
+    {
+     if(front==NULL)
+     {
+      r = (struct node *)malloc(sizeof(struct node));
+      r->data = value;
+      r->prev=NULL;
+      r->next=NULL;
+      front = r;
+      rear = r;
+      }
+     else
+      {
+       if(rear->next==NULL)
+        {
+          r = (struct node *)malloc(sizeof(struct node));
+       	  r->data = value;
+       	  start->next = r;
+       	  r->prev = start;
+       	  r->next = start;
+       	  start->prev = r;
+        }
+      else
+       {
+         temp = start;
+         while(temp->next!=start)
+         {
+          temp = temp->next;
+         }
+         r = (struct node *)malloc(sizeof(struct node));
+         r->data = value;
+         r->next = temp->next;
+         temp->next->prev = r;
+         r->prev = temp;
+         temp->next = r;
+        } 
+       } 
+      printf("want more value to be enqueud at rear end? press 3\n");
+      scanf("%d",&y);
+    }
+    
+    while(y==2)
+    {
+     if(front==NULL)
+     {
+      r = (struct node *)malloc(sizeof(struct node));
+      r->data = value;
+      r->prev=NULL;
+      r->next=NULL;
+      front = r;
+      rear = r;
+      }
+     else
+      {
+       if(front->next==NULL)
+        {
+          r = (struct node *)malloc(sizeof(struct node));
+       	  r->data = value;
+       	  r->next = front;
+       	  r->prev = rear;
+       	  front->prev = r;
+       	  rear->next = r;
+       	  front = r;
+        }
+      else
+       {
+         
+         r = (struct node *)malloc(sizeof(struct node));
+         r->data = value;
+         r->next = front;
+         rear->next = r;
+         front->prev = r;
+         r->prev = rear;
+         front = r;
+         
+        } 
+       } 
+      printf("want more value to be enqueud at front end? press 3\n");
+      scanf("%d",&y);
+    }
+    
+    printf("want more value to be enqueued in cdll as dequeue\n");
+    scanf("%d",&x);
+   }
+    
+    
+    temp = start;
+    int count=0;
+    struct node *p=NULL;
+    while(temp!=p)
+    {
+      printf("%d -> ",temp->data);
+      temp = temp->next;
+      count++;
+      p=start;
+     }
+     
+     printf("\n %d nodes are in the circular dll\n",count);
+      
+      
+     printf("deletion in the doubly circular linked list as dequeue\n");
+  x=1;
+  while(x==1)
+  {
+    printf("want to enqueu at front end? press 2\n");
+    printf("want to enqueu at rear end? press 3\n");
+    scanf("%d",&y);
+    
+    while(y==3)
+    {
+     if(front==NULL)
+     {
+      r = (struct node *)malloc(sizeof(struct node));
+      r->data = value;
+      r->prev=NULL;
+      r->next=NULL;
+      front = r;
+      rear = r;
+      }
+     else
+      {
+       if(rear->next==NULL)
+        {
+          r = (struct node *)malloc(sizeof(struct node));
+       	  r->data = value;
+       	  start->next = r;
+       	  r->prev = start;
+       	  r->next = start;
+       	  start->prev = r;
+        }
+      else
+       {
+         temp = start;
+         while(temp->next!=start)
+         {
+          temp = temp->next;
+         }
+         r = (struct node *)malloc(sizeof(struct node));
+         r->data = value;
+         r->next = temp->next;
+         temp->next->prev = r;
+         r->prev = temp;
+         temp->next = r;
+        } 
+       } 
+      printf("want more value to be enqueud at rear end? press 3\n");
+      scanf("%d",&y);
+    }
+    
+    while(y==2)
+    {
+     if(front==NULL)
+     {
+      r = (struct node *)malloc(sizeof(struct node));
+      r->data = value;
+      r->prev=NULL;
+      r->next=NULL;
+      front = r;
+      rear = r;
+      }
+     else
+      {
+       if(front->next==NULL)
+        {
+          r = (struct node *)malloc(sizeof(struct node));
+       	  r->data = value;
+       	  r->next = front;
+       	  r->prev = rear;
+       	  front->prev = r;
+       	  rear->next = r;
+       	  front = r;
+        }
+      else
+       {
+         
+         r = (struct node *)malloc(sizeof(struct node));
+         r->data = value;
+         r->next = front;
+         rear->next = r;
+         front->prev = r;
+         r->prev = rear;
+         front = r;
+         
+        } 
+       } 
+      printf("want more value to be enqueud at front end? press 3\n");
+      scanf("%d",&y);
+    }
+    
+    printf("want more value to be enqueued in cdll as dequeue\n");
+    scanf("%d",&x);
+   }
+    
+    temp = start;
+     count=0;
+    p = NULL;
+    while(temp!=p)
+    {
+      printf("%d -> ",temp->data);
+      temp = temp->next;
+      count++;
+      p = start;
+     }
+     
+     printf("\n %d nodes are in the circular dll\n",count);
+     
+     return 0;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+     
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
