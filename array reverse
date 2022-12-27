@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main(void)
+{
+
+  int i,j,arr[5] = {10,20,30,40,50};
+  int temp;
+  for(i=0;i<5;i++)
+     printf("%d\t",arr[i]);
+
+ printf("\n");
+ i=0;
+ j=4;
+ while(j-->=i++)
+ {
+   temp = arr[j];
+   arr[j] = arr[i];
+   arr[i] = temp;
+ }
+
+
+
+ for(i=0;i<5;i++)
+     printf("%d\t",arr[i]);
+
+
+
+
+ return 0;
+}
