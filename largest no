@@ -1,0 +1,23 @@
+# include<stdio.h>
+int main(){
+int a,b,c;
+printf("input the three number");
+scanf("%d%d%d",&a,&b,&c);
+if(a>c)
+{
+    if(a>b)
+   printf("a is greater");
+   else
+    printf("b is greater");
+}
+    else
+{
+    if(b>c)
+        printf("b is grater");
+    else
+        printf("c is greater");
+}
+    if(b==c)
+   printf("sucess!");
+return 0;
+}
