@@ -1,0 +1,91 @@
+# Data-Structure
+#include<stdio.h>
+#include<stdlib.h>
+#define max 3
+
+int st[max],top=-1;
+void push(int st[],int val);
+int pop(int st[]);
+void display(int st[]);
+int main()
+{
+  int x=1,val;
+  while(x==1)
+  {
+    printf("want to push?\n");
+    scanf("%d",&val);
+    push(st,x);
+    scanf("%d",&x);
+   }
+   x=1;
+   display(st);
+   while(x==1)
+  {
+    printf("want to pop?\n");
+    scanf("%d",&val);
+    val = pop(st);
+    printf("%d is poped out\n",val);
+   }
+   display(st);
+   return 0;
+   }
+   void push(int st[max],int val)
+   {
+     if(top==max-1)
+      {
+        printf("overflow\n");
+        exit(1);
+       }
+      else
+      {
+        top++;
+        st[top]=val;
+       }
+    }
+     int pop(int st[max])
+     {
+       int y;
+       if(top==-1)
+       {
+          printf("underflow\n");
+          exit(1);
+        }
+        else
+        {
+          y = st[top];
+          top--;
+          return y;
+         }
+         
+        }
+        
+        void display(int st[max])
+        {
+          int top1=top;
+          while(top1!=-1)
+          {
+            printf("%d <--\t",st[top1]);
+            top1--;
+           }
+          }
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+   
+   
+   
+   
+    
+   
+    
+ 
